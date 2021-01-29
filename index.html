@@ -3,33 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Calculator</title>
 </head>
 <body>
-    <main>
-        <input type="number" value=0>
-        <div class="keys">
-            <button class="op__key" op="clear">C</button>
-            <button class="op__key" op="negate">+/-</button>
-            <button class="op__key" op="percent">%</button>
-            <button class="op__key" op="divide">/</button>
-            <button class="num__key">7</button>
-            <button class="num__key">8</button>
-            <button class="num__key">9</button>
-            <button class="op__key" op="multiply">*</button>
-            <button class="num__key">4</button>
-            <button class="num__key">5</button>
-            <button class="num__key">6</button>
-            <button class="op__key" op="subtract">-</button>
-            <button class="num__key">1</button>
-            <button class="num__key">2</button>
-            <button class="num__key">3</button>
-            <button class="op__key" op="add">+</button>
-            <button class="num__key">0</button>
-            <button class="num__key">.</button>
-            <button class="eq__key">=</button>
-
-        </div>
-    </main>
+    <form class="calculator" name="cal" action="">
+        <input class="value" type="text" name="txt" readonly="">
+        <span class="num clear" onclick="document.cal.txt.value = ''">C</span>
+        <span class="num" onclick="document.cal.txt.value += '/'">/</span>
+        <span class="num" onclick="document.cal.txt.value += '*'">*</span>
+        <span class="num" onclick="document.cal.txt.value += '7'">7</span>
+        <span class="num" onclick="document.cal.txt.value += '8'">8</span>
+        <span class="num" onclick="document.cal.txt.value += '9'">9</span>
+        <span class="num" onclick="document.cal.txt.value += '-'">-</span>
+        <span class="num" onclick="document.cal.txt.value += '4'">4</span>
+        <span class="num" onclick="document.cal.txt.value += '5'">5</span>
+        <span class="num" onclick="document.cal.txt.value += '6'">6</span>
+        <span class="num plus" onclick="document.cal.txt.value += '+'">+</span>
+        <span class="num" onclick="document.cal.txt.value += '3'">3</span>
+        <span class="num" onclick="document.cal.txt.value += '2'">2</span>
+        <span class="num" onclick="document.cal.txt.value += '1'">1</span>
+        <span class="num" onclick="document.cal.txt.value += '0'">0</span>
+        <span class="num" onclick="document.cal.txt.value += '00'">00</span>
+        <span class="num" onclick="document.cal.txt.value += '.'">.</span>
+        <span class="num equal" onclick="document.cal.txt.value = eval(cal.txt.value)">=</span>
+    </form>
+    
+    <!-- <script src="script.js"></script> -->
 </body>
 </html>
